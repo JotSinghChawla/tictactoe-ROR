@@ -4,7 +4,6 @@
 
 .row {
   display: flex;
-  width: 300px;
 }
 
 .col {
@@ -12,6 +11,57 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  max-width: 110px;
+  // border: 1px solid red;
   height: 100px;
+
+  border: 2px solid #4666ff;
+
+  text-align: center;
+  background: transparent;
+  font-size: 50px;
+  color: #ff0070;
+  box-shadow: 0 0 10px #4666ff, 0 0 10px #4666ff;
+  text-shadow: 0 0 8px #ff0080, 0 0 10px #ff0080;
+  cursor: pointer;
+}
+
+.heading {
+  display: flex;
+  height: 200px;
+  width: 400px;
+  margin: auto;
+  margin-top: -50px;
+}
+
+.outside {
+  width: 300px;
+  margin: auto;
+}
+
+.inside_button {
+  background-color: transparent;
+  height: 95px;
+  width: 100px;
+  border: 0;
+}
+
+.new_game_button {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  background-color: #743ad5;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new_game_button:hover {
+  background-color: #4666ff;
 }

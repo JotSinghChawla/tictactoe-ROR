@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+body {
+  margin: 0;
+  background-image: url("bg1.jpg");
+}
+
+.gradient_border {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 7px;
+
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+.play_image {
+  width: 400px;
+  height: 400px;
+}
+
+.start_game {
+  width: 200px;
+  height: 50px;
+  background-color: #743ad5;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  justify-content: center;
+}
+.start_game:hover {
+  background-color: #d53a9d;
+}
+
+.m_auto {
+  display: flex;
+  margin: auto;
+}
