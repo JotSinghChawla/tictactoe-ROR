@@ -40,7 +40,7 @@ class MovesController < ApplicationController
             logger.info "======================  #{@game.state}"
             $winner = @game.state[0.to_s][1.to_s]
 
-        elsif @game.state[2.to_s][0.to_s] == @game.state[1.to_s][2.to_s] && @game.state[1.to_s][2.to_s] == @game.state[2.to_s][2.to_s] 
+        elsif @game.state[0.to_s][2.to_s] == @game.state[1.to_s][2.to_s] && @game.state[1.to_s][2.to_s] == @game.state[2.to_s][2.to_s] 
             logger.info "======================  #{@game.state}"
             $winner = @game.state[2.to_s][0.to_s]
             
