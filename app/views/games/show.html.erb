@@ -1,5 +1,18 @@
-<h1>Tic Tac Toe</h1>
+<div class="">
+<%= image_tag "heading1.png", class: "heading " %>
 
-<div >
+<p> 
+<% if $winner == "x" || $winner == "o" %>
+  <script>
+    alert("Player <%= $winner.upcase %> has won the game!!!");
+    <% $winner = "random" %>
+    window.location.replace("/games");
+  </script>
+
+<% end %>
+</p>
+
+<div class="outside">
   <%= render @game %>
+</div>
 </div>
