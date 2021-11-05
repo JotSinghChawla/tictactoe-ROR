@@ -20,6 +20,16 @@ class MovesController < ApplicationController
         @game = Game.find(params[:game_id])
         @game.move(params[:row], params[:col])
 
+        # @game.state.each do |k,v|
+        #     if v.values.include? nil
+        #         break
+        #     end
+        # end
+        if ( !@game.state[0.to_s].values.include? nil ) && ( !@game.state[1.to_s].values.include? nil ) && ( !@game.state[2.to_s].values.include? nil )
+            logger.info "\n\n\nIts a Tie\n\n\n"
+            $winner = "tie"
+        end
+
         if @game.state[0.to_s][0.to_s] == @game.state[0.to_s][1.to_s] && @game.state[0.to_s][1.to_s] == @game.state[0.to_s][2.to_s] 
             logger.info "======================  #{@game.state}"
             $winner = @game.state[0.to_s][0.to_s]

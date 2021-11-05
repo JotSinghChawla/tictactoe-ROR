@@ -1,3 +1,13 @@
+
+<% if $winner == "tie" %>
+  <script>
+    alert("It's a TIE !!!");
+    <% $winner = "random" %>
+    window.location.replace("/games");
+  </script>
+
+<% end %>
+
 <div class="">
 <%= image_tag "heading1.png", class: "heading " %>
 
