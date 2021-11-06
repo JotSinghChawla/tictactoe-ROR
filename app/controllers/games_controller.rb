@@ -8,6 +8,7 @@ class GamesController < ApplicationController
   end
 
   def create 
+    # @game = Game.new(game_params, state: state, current_symbol: current_symbol)
     redirect_to Game.create
   end
 end

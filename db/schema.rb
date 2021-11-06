@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_06_031937) do
+ActiveRecord::Schema.define(version: 2021_11_06_040518) do
 
   create_table "games", force: :cascade do |t|
-    t.json "state"
-    t.string "current_symbol"
+    t.json "state", default: {"0"=>{"0"=>nil, "1"=>nil, "2"=>nil}, "1"=>{"0"=>nil, "1"=>nil, "2"=>nil}, "2"=>{"0"=>nil, "1"=>nil, "2"=>nil}}
+    t.string "current_symbol", default: "x"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "playerx"
