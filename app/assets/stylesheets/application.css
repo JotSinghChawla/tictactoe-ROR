@@ -34,8 +34,8 @@ body {
 }
 
 .play_image {
-  width: 400px;
-  height: 400px;
+  max-width: 600px;
+  height: 500px;
 }
 
 .start_game {
@@ -47,15 +47,31 @@ body {
   border: none;
   font-size: 20px;
   font-weight: bold;
-  margin-top: 20px;
   cursor: pointer;
-  justify-content: center;
+  margin: auto !important;
+  display: grid;
+  margin-top: 50px !important;
 }
 .start_game:hover {
   background-color: #d53a9d;
 }
 
-.m_auto {
-  display: flex;
-  margin: auto;
+.start_game_form {
+  display: grid;
+  place-content: center;
+}
+
+.start_game_form input {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.start_game_form label {
+  font-size: 22px;
+  text-align: center;
+  width: 100px;
+  background-color: #743ad5;
+  color: white;
+  padding: 3px;
+  border-radius: 10px;
 }

@@ -8,11 +8,13 @@
 
 <% end %>
 
-<div class="">
+<div class="w-100 text-center">
 <%= image_tag "heading1.png", class: "heading " %>
 
 <p> 
 <% if $winner == "x" || $winner == "o" %>
+  <% if $winner == "x" then $winner = @game.playerx end %>
+  <% if $winner == "o" then $winner = @game.playero end %>
   <script>
     alert("Player <%= $winner.upcase %> has won the game!!!");
     <% $winner = "random" %>
@@ -22,7 +24,17 @@
 <% end %>
 </p>
 
-<div class="outside">
-  <%= render @game %>
+<div class="row">
+<div class="col-md-4">
+<h1> <%= @game.playerx %> </h1>
+</div>
+<div class="col-md-4 main_box">
+
+<%= render @game %>
+</div>
+<div class="col-md-4">
+<h1> <%= @game.playero %> </h1>
+
+</div>
 </div>
 </div>

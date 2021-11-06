@@ -2,24 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.row {
+.main_row {
   display: flex;
 }
 
-.col {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  max-width: 110px;
+.main_col {
+  // display: flex;
+  // flex-grow: 1;
+  // justify-content: center;
+  // align-items: center;
+  min-width: 110px;
   // border: 1px solid red;
   height: 100px;
 
   border: 2px solid #4666ff;
 
-  text-align: center;
+  // text-align: center;
   background: transparent;
-  font-size: 50px;
+  font-size: 53px;
   color: #ff0070;
   box-shadow: 0 0 10px #4666ff, 0 0 10px #4666ff;
   text-shadow: 0 0 8px #ff0080, 0 0 10px #ff0080;
@@ -64,4 +64,9 @@
 }
 .new_game_button:hover {
   background-color: #4666ff;
+}
+
+.main_box {
+  display: grid;
+  place-content: center;
 }

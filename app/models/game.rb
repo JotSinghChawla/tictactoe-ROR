@@ -19,4 +19,5 @@ class Game < ApplicationRecord
         self.current_symbol = current_symbol == "x" ? "o" : "x"
         self.save!
     end
+
 end
