@@ -1,7 +1,21 @@
 <div class="d-flex">
 <%= image_tag "play.png", class: "play_image" %>
 
-<form action="/games" method="post" >
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="submit" value="Start New Game" class="start_game m_auto">
-</form>
+
+<%= form_with url: "/games", method: :post do |form| %>
+
+  <div class="field">
+  <%= form.label :player_x %>
+  <%= form.text_field :playerx %>
+  </div>
+
+  
+  <div class="field">
+  <%= form.label :player_o %>
+  <%= form.text_field :playero %>
+  </div>
+
+  <div class="actions">
+  <%= form.submit "Start New Game", class: "start_game m_auto" %>
+  </div>
+<% end %>
