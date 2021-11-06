@@ -30,36 +30,36 @@ class MovesController < ApplicationController
             $winner = "tie"
         end
 
-        if @game.state[0.to_s][0.to_s] == @game.state[0.to_s][1.to_s] && @game.state[0.to_s][1.to_s] == @game.state[0.to_s][2.to_s] 
-            logger.info "======================  #{@game.state}"
+        if @game.state[0.to_s][0.to_s] != nil && @game.state[0.to_s][0.to_s] == @game.state[0.to_s][1.to_s] && @game.state[0.to_s][1.to_s] == @game.state[0.to_s][2.to_s] 
+            logger.info "1======================  #{@game.state}"
             $winner = @game.state[0.to_s][0.to_s]
 
-        elsif @game.state[1.to_s][0.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[1.to_s][2.to_s] 
-            logger.info "======================  #{@game.state}"
+        elsif @game.state[1.to_s][0.to_s] != nil &&  @game.state[1.to_s][0.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[1.to_s][2.to_s] 
+            logger.info "2======================  #{@game.state}"
             $winner = @game.state[1.to_s][0.to_s]
 
-        elsif @game.state[2.to_s][0.to_s] == @game.state[2.to_s][1.to_s] && @game.state[2.to_s][1.to_s] == @game.state[2.to_s][2.to_s] 
-            logger.info "======================  #{@game.state}"
+        elsif @game.state[2.to_s][0.to_s] != nil &&  @game.state[2.to_s][0.to_s] == @game.state[2.to_s][1.to_s] && @game.state[2.to_s][1.to_s] == @game.state[2.to_s][2.to_s] 
+            logger.info "3======================  #{@game.state}"
             $winner = @game.state[2.to_s][0.to_s]
 
-        elsif @game.state[0.to_s][0.to_s] == @game.state[1.to_s][0.to_s] && @game.state[1.to_s][0.to_s] == @game.state[2.to_s][0.to_s]  
-            logger.info "======================  #{@game.state}"
+        elsif @game.state[0.to_s][0.to_s] != nil &&  @game.state[0.to_s][0.to_s] == @game.state[1.to_s][0.to_s] && @game.state[1.to_s][0.to_s] == @game.state[2.to_s][0.to_s]  
+            logger.info "4======================  #{@game.state}"
             $winner = @game.state[0.to_s][0.to_s]
 
-        elsif @game.state[0.to_s][1.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[2.to_s][1.to_s]
-            logger.info "======================  #{@game.state}"
+        elsif @game.state[0.to_s][1.to_s] != nil &&  @game.state[0.to_s][1.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[2.to_s][1.to_s]
+            logger.info "5======================  #{@game.state}"
             $winner = @game.state[0.to_s][1.to_s]
 
-        elsif @game.state[0.to_s][2.to_s] == @game.state[1.to_s][2.to_s] && @game.state[1.to_s][2.to_s] == @game.state[2.to_s][2.to_s] 
-            logger.info "======================  #{@game.state}"
+        elsif @game.state[0.to_s][2.to_s] != nil &&  @game.state[0.to_s][2.to_s] == @game.state[1.to_s][2.to_s] && @game.state[1.to_s][2.to_s] == @game.state[2.to_s][2.to_s] 
+            logger.info "6======================  #{@game.state}"
             $winner = @game.state[2.to_s][0.to_s]
             
-        elsif @game.state[0.to_s][0.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[2.to_s][2.to_s] 
-            logger.info "======================  #{@game.state}"
+        elsif @game.state[0.to_s][0.to_s] != nil &&  @game.state[0.to_s][0.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[2.to_s][2.to_s] 
+            logger.info "7======================  #{@game.state}"
             $winner = @game.state[0.to_s][0.to_s]
 
-        elsif @game.state[0.to_s][2.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[2.to_s][0.to_s]
-            logger.info "======================  #{@game.state}" 
+        elsif @game.state[0.to_s][2.to_s] != nil &&  @game.state[0.to_s][2.to_s] == @game.state[1.to_s][1.to_s] && @game.state[1.to_s][1.to_s] == @game.state[2.to_s][0.to_s]
+            logger.info "8======================  #{@game.state}" 
             $winner = @game.state[0.to_s][2.to_s]
         end
     end
