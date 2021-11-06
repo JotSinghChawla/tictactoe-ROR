@@ -25,16 +25,19 @@
 </p>
 
 <div class="row">
-<div class="col-md-4">
-<h1> <%= @game.playerx %> </h1>
+  <div class="col-md-4 player_name <%= @game.current_symbol == 'x' ? 'current' : '' %> ">
+    <p> Player <%= @game.playerx %> </p>
+    <p> Turn </p>
+  </div>
+  <div class="col-md-4 main_box">
+  <%= render @game %>
+  </div>
+    <div class="col-md-4 player_name <%= @game.current_symbol == 'o' ? 'current' : '' %> ">
+      <p> Player <%= @game.playero %> </p>
+      <p> Turn </p>
+    </div>
 </div>
-<div class="col-md-4 main_box">
-
-<%= render @game %>
-</div>
-<div class="col-md-4">
-<h1> <%= @game.playero %> </h1>
-
-</div>
+<div> 
+  <%= link_to 'New Game', "/games", class: "btn btn-primary new_game_button" %>
 </div>
 </div>

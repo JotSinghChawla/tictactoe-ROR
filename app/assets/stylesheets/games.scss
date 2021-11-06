@@ -28,10 +28,10 @@
 
 .heading {
   display: flex;
-  height: 200px;
-  width: 400px;
+  height: 175px;
+  width: 350px;
   margin: auto;
-  margin-top: -50px;
+  margin-top: -70px;
 }
 
 .outside {
@@ -69,4 +69,16 @@
 .main_box {
   display: grid;
   place-content: center;
+}
+
+.player_name {
+  font-size: 3em;
+  // font-weight: bold;
+  color: black;
+  // text-shadow: 0 0 8px #ff0080, 0 0 10px #ff0080;
+}
+
+.current {
+  color: #ff0070;
+  text-shadow: 0 0 8px #ff0080, 0 0 10px #ff0080;
 }
