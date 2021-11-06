@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_05_055225) do
+ActiveRecord::Schema.define(version: 2021_11_06_031937) do
 
   create_table "games", force: :cascade do |t|
     t.json "state"
     t.string "current_symbol"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "playerx"
+    t.string "playero"
+    t.string "match_winner", default: "Not Completed!"
   end
 
 end
