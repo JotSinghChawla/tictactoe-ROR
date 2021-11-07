@@ -27,17 +27,17 @@
 <div class="row">
   <div class="col-md-4 player_name <%= @game.current_symbol == 'x' ? 'current' : '' %> ">
     <p> Player <%= @game.playerx %> </p>
-    <p> Turn </p>
+    <p> <%= @game.current_symbol == 'x' ? 'Turn' : '' %> </p>
   </div>
   <div class="col-md-4 main_box">
   <%= render @game %>
   </div>
     <div class="col-md-4 player_name <%= @game.current_symbol == 'o' ? 'current' : '' %> ">
       <p> Player <%= @game.playero %> </p>
-      <p> Turn </p>
+      <p> <%= @game.current_symbol == 'o' ? 'Turn' : '' %>  </p>
     </div>
 </div>
 <div> 
-  <%= link_to 'New Game', "/games", class: "btn btn-primary new_game_button" %>
+  <%= link_to 'New Game', "/games", class: "new_game_button mt-4" %>
 </div>
 </div>

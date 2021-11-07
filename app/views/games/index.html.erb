@@ -1,8 +1,8 @@
 <div class="row w-100">
-<%= image_tag "play.png", class: "play_image col-6" %>
+<%= image_tag "play.png", class: "img-fluid play_image col-7" %>
 
 
-<%= form_with url: "/games", html: { class: "ml-5 pl-5 col-5 start_game_form"}, method: :post do |form| %>
+<%= form_with url: "/games", html: { class: "m-auto col-5 start_game_form"}, method: :post do |form| %>
 
   <div class="field">
   <%= form.label :player_x %>
@@ -16,6 +16,6 @@
   </div>
 
   <div class="actions">
-  <%= form.submit "Start New Game", class: "start_game m_auto" %>
+  <%= form.submit "Start New Game", class: "start_game" %>
   </div>
 <% end %>
