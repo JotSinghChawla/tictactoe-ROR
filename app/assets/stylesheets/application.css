@@ -15,7 +15,9 @@
  */
 body {
   margin: 0;
-  background-image: url("bg1.jpg");
+  /* background-image: url("bg1.jpg"); */
+  background: url("bg1.jpg"),
+    linear-gradient(to bottom left, #015b78, rgba(11, 121, 158, 0.8));
 }
 
 .gradient_border {
